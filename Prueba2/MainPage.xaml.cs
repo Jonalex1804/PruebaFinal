@@ -1,4 +1,6 @@
-﻿namespace Prueba2
+﻿using Microsoft.Maui.Controls;
+namespace ChuckNorrisJokes.Views
+
 {
     public partial class MainPage : ContentPage
     {
@@ -7,18 +9,14 @@
         public MainPage()
         {
             InitializeComponent();
-        }
+            BindingContext = new MainViewModel ();
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
+            var stackLayout = new StackLayout ();
+            var button = new Button { Text = "Obtener Nuevo Chiste" };
+            button.SetBinding(Button.CommandProperty, new Binding("GetNewJokeCommand"));
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+           stackLayout.Children.Add(button);
+            Content = stackLayout;
         }
     }
 
