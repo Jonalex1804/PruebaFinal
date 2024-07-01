@@ -1,4 +1,5 @@
-﻿namespace Prueba2
+﻿
+namespace Prueba2
 {
     public partial class AppShell : Shell
     {

@@ -1,11 +1,9 @@
 using Microsoft.Maui.Controls;
 using ChuckNorrisJokes.ViewModels;
 
- namespace ChuckNorrisJokes.Views;
+ namespace ChuckNorrisJokes.Views
 {
-
-
-	public partial class JokesPage : ContentPage
+    public partial class JokesPage : ContentPage
 	{
 		public JokesPage()
 		{
@@ -14,4 +12,4 @@ using ChuckNorrisJokes.ViewModels;
 
 		}
 	}
- }
+}
