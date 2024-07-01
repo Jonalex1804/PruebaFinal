@@ -5,7 +5,7 @@ using Microsoft.Maui.Controls;
 
 namespace ChuckNorrisJokes.ViewModels
 {
-    public class MainViewModel : BaseViewModel
+    public class MainViewModel : ViewModelBase 
     {
         private readonly JokeDatabase _database;
 
@@ -20,7 +20,7 @@ namespace ChuckNorrisJokes.ViewModels
 
         private async void GetNewJoke()
         {
-            // Lógica para obtener el chiste desde la API y guardar en SQLite
+            
             var joke = await ChuckNorrisApiService.GetRandomJoke();
 
             // Generar el código

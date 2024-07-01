@@ -8,6 +8,7 @@ using ChuckNorrisJokes.ViewModels;
 		public JokesPage()
 		{
 			InitializeComponent();
+
 			BindingContext = new JokesViewModel();
 
 		}
